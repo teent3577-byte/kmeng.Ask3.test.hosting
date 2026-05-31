@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Form Layout</title>
+
+<style>
+    body{
+        font-family: "Times New Roman", serif;
+        background:#f5f5f5;
+    }
+
+    table{
+        width: 900px;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background: white;
+    }
+
+    th, td{
+        border: 2px solid #bdbdbd;
+        padding: 12px;
+        vertical-align: top;
+        font-size: 28px;
+    }
+
+    th{
+        background: #d9d9ff;
+        text-align: center;
+        font-size: 42px;
+    }
+
+    input[type="text"]{
+        width: 100%;
+        font-size: 28px;
+        padding: 5px;
+    }
+
+    select{
+        font-size: 28px;
+        padding: 5px;
+    }
+
+    textarea{
+        width: 100%;
+        height: 180px;
+        font-size: 24px;
+        resize: none;
+    }
+
+    .radio-group,
+    .checkbox-group{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 28px;
+    }
+
+    button{
+        font-size: 28px;
+        padding: 10px 40px;
+        margin: 10px auto;
+        display: block;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Value</th>
+    </tr>
+
+    <tr>
+        <td>Name</td>
+        <td>
+            <input type="text" name="name">
+        </td>
+    </tr>
+
+    <tr>
+        <td>Sex</td>
+        <td>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="sex"> Male
+                </label>
+
+                <label>
+                    <input type="radio" name="sex" checked> Female
+                </label>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Eye color</td>
+        <td>
+            <select>
+                <option>green</option>
+                <option>blue</option>
+                <option>brown</option>
+                <option>black</option>
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Check all that apply</td>
+        <td>
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox"> Over 6 feet tall
+                </label>
+
+                <label>
+                    <input type="checkbox"> Over 200 pounds
+                </label>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+            Describe your athletic ability:
+            <br><br>
+            <textarea></textarea>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2" style="text-align:center;">
+            <button>Enter my information</button>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
